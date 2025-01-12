@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - API_BASE_URL=https://dev.whatcrm.net/v3
+      - CURRENCY=RUB
+      - CRM=lk
+      - TOKEN=5d8af8faaeb61680883a850be0c577e2
+

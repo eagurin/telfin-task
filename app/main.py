@@ -12,7 +12,7 @@ app.include_router(tariff_router)
 
 @app.on_event("startup")
 async def startup_event():
-	pass
+	await HTTPClient.get_session()
 
 @app.on_event("shutdown")
 async def shutdown_event():
