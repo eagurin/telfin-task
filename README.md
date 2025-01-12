@@ -56,20 +56,6 @@ COPY app/ app/
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-Переменные окружения для Docker настроены в docker-compose.yml:
-```yaml
-services:
-	api:
-		build: .
-		ports:
-			- "8000:8000"
-		environment:
-			- API_BASE_URL=https://dev.whatcrm.net/v3
-			- CURRENCY=RUB
-			- CRM=lk
-			- TOKEN=your_token_here
-```
-
 2. API будет доступно по адресу: `http://localhost:8000`
 
 ### Локальный запуск
